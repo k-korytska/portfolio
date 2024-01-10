@@ -25,6 +25,15 @@ function toggleButtons(activeBtn, inactiveBtn) {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  setTimeout(() => {
+    const loadingScreen = document.getElementById("loadingScreen");
+    loadingScreen.style.opacity = "0";
+
+    setTimeout(() => {
+      loadingScreen.style.display = "none";
+    }, 1500);
+  }, 3500);
+
   const skillsSection = document.querySelector(".skills-section");
   const workButtons = document.querySelectorAll(".works-container button");
   workButtons.forEach((button) => {
