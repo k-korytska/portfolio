@@ -187,7 +187,15 @@ tr td:first-child {
   flex-direction: column;
   align-items: center;
   gap: 4em;
-  padding: 5em 0;
+  padding: 5em 0 1em 0;
+}
+
+.copyright{
+  padding-top: 5em;
+}
+
+.copyright p{
+  font-size: 0.8em;
 }
 
 .button-container {
@@ -450,6 +458,10 @@ button h3 {
 
 .work {
   display: none;
+}
+
+footer{
+  background-color: var(--black);
 }
 
 @media (min-width: 1540px) {
