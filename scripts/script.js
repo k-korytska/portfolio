@@ -33,6 +33,10 @@ if (designBtn && aboutMeBtn && worksPanel && experiencePanel) {
   });
 }
 
+window.addEventListener('pageshow', () => {
+  document.body.classList.remove('fade-out');
+});
+
 document.querySelectorAll('a').forEach((link) => {
   link.addEventListener('click', (e) => {
     const href = link.getAttribute('href');
