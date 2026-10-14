@@ -16,16 +16,35 @@
 </head>
 <body>
     <a class="skip-link" href="#project"> Skip to project </a>
- <header class="header">
+  <header class="header">
         <section class="header-bg" aria-hidden="true">
-        <spline-viewer url="https://prod.spline.design/ubySSJ5nrAHiNCEH/scene.splinecode"></spline-viewer>
+          <div class="scene">
+      <div class="blob" id="blob">
+        <div class="blob__surface"></div>
+        <div class="blob__shine"></div>
+        <div class="blob__grain"></div>
+      </div>
+
+      <div class="curtain" aria-hidden="true">
+        <div class="curtain__bands"></div>
+        <div class="curtain__texture"></div>
+      </div>
+    </div>
         </section>
         <section class="header-intro">
            
          <section class="section-intro">
             <span class="visually-hidden">Karina Koryska</span>
             <img src="assets/icons/karina-korytska-logo.svg" alt="" aria-hidden="true">
-            <h3>UX/UI Designer • Digital Health • Accessibility</h3>
+           <h1>
+            <span aria-hidden="true">
+              UX/UI Designer • Digital Health • Accessibility
+            </span>
+
+            <span class="sr-only">
+              Karina Korytska - UX/UI Designer, Digital Health, Accessibility
+            </span>
+            </h1>
         </section>
 
          <section class="nav-section">
@@ -52,7 +71,8 @@
         </section>
 
         </section>
- </header>
+    </header>
+
  <div class="decoration-line" aria-hidden="true"></div>
     <main class="visually-hidden">
         <section class="container">
@@ -96,7 +116,7 @@
     <section class="skills-section">
 
       <div id="detailContainer" class="button-container">
-        <a id="designReturnBtn" class="active return-button" href="index.html#works" aria-label="Navitage to all works">
+        <a id="designReturnBtn" class="active return-button" href="index.html#works" aria-label="Navigate to all works">
           <img src="./assets/icons/arrow-back-white.svg" alt="" aria-hidden="true"/>
           <span class="nav-title">View all works</span>
         </a>
@@ -109,7 +129,7 @@
             <section class="work-intro">
               <h2>Teachers dashboard system</h2>
               <h3>Designing a classroom dashboard for teachers</h3>   
-              <h3>2025</h3>
+              <p class="project-year">2025</p>
             </section>
             <div>
             <img src="./assets/works/docentenportaal/sss-mockup.png" alt="Desktop interface of the teacher dashboard showing teacher overview screen" />

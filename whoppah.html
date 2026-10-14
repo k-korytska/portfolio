@@ -17,41 +17,61 @@
 <body>
     <header class="header">
         <section class="header-bg" aria-hidden="true">
-        <spline-viewer url="https://prod.spline.design/ubySSJ5nrAHiNCEH/scene.splinecode"></spline-viewer>
+          <div class="scene">
+      <div class="blob" id="blob">
+        <div class="blob__surface"></div>
+        <div class="blob__shine"></div>
+        <div class="blob__grain"></div>
+      </div>
+
+      <div class="curtain" aria-hidden="true">
+        <div class="curtain__bands"></div>
+        <div class="curtain__texture"></div>
+      </div>
+    </div>
         </section>
         <section class="header-intro">
            
-        <section class="section-intro">
+         <section class="section-intro">
             <span class="visually-hidden">Karina Koryska</span>
             <img src="assets/icons/karina-korytska-logo.svg" alt="" aria-hidden="true">
-            <h3>UX/UI Designer • Digital Health • Accessibility</h3>
+           <h1>
+            <span aria-hidden="true">
+              UX/UI Designer • Digital Health • Accessibility
+            </span>
+
+            <span class="sr-only">
+              Karina Korytska - UX/UI Designer, Digital Health, Accessibility
+            </span>
+            </h1>
         </section>
 
          <section class="nav-section">
           <section class="nav-links">
             <ul>
               <li>
-                <a href="mailto:k.korytska@gmail.com"
-                  ><img src="./assets/icons/mail-icon.svg"
+                <a href="mailto:k.korytska@gmail.com"  aria-label="Send email to Karina Korytska"
+                  ><img src="./assets/icons/mail-icon.svg" alt=""
                 /></a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/karina-korytska/" target="_blank"
-                  ><img src="./assets/icons/linkedin-logo.svg"
+                <a href="https://www.linkedin.com/in/karina-korytska/" target="_blank" aria-label="Karina Korytska on LinkedIn"
+                  ><img src="./assets/icons/linkedin-logo.svg" alt=""
                 /></a>
               </li>
               <li>
-                <a href="https://dribbble.com/karinakorytska" target="_blank"
-                  ><img src="./assets/icons/dribbble-logo.svg"
+                <a href="https://dribbble.com/karinakorytska" target="_blank"  aria-label="Karina Korytska on Dribbble"
+                  ><img src="./assets/icons/dribbble-logo.svg" alt=""
                 /></a>
               </li>
             </ul>
           </section>
 
-</section>
+        </section>
 
         </section>
     </header>
+
  <div class="decoration-line" aria-hidden="true"></div>
     <main class="visually-hidden">
         <section class="container">
@@ -94,7 +114,7 @@
 
     <section class="skills-section">
       <div id="detailContainer" class="button-container">
-        <a id="designReturnBtn" class="active return-button" href="index.html#works" aria-label="Navitage to all works">
+        <a id="designReturnBtn" class="active return-button" href="index.html#works" aria-label="Navigate to all works">
           <img src="./assets/icons/arrow-back-white.svg" alt="" aria-hidden="true"/>
           <span class="nav-title">View all works</span>
         </a>
@@ -107,7 +127,7 @@
             <section class="work-intro">
               <h2>Whoppah landing page</h2>
               <h3>Designing a conversion-focused landing page for seller acquisition</h3>   
-              <h3>2024</h3>
+              <p class="project-year">2024</p>
             </section>
             <img src="./assets/works/whoppah/whoppah-mockup.png" alt="Desktop mockup of the Whoppah landing page interface" />
             <section class="process-section">

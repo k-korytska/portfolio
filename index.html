@@ -12,18 +12,38 @@
     />
 </head>
 <body>
-  <a class="skip-link" href="#works">
+  <a class="skip-link" href="#works-panel">
   Skip to projects </a>
-    <header class="header">
+
+ <header class="header">
         <section class="header-bg" aria-hidden="true">
-        <spline-viewer url="https://prod.spline.design/ubySSJ5nrAHiNCEH/scene.splinecode"></spline-viewer>
+          <div class="scene">
+      <div class="blob" id="blob">
+        <div class="blob__surface"></div>
+        <div class="blob__shine"></div>
+        <div class="blob__grain"></div>
+      </div>
+
+      <div class="curtain" aria-hidden="true">
+        <div class="curtain__bands"></div>
+        <div class="curtain__texture"></div>
+      </div>
+    </div>
         </section>
         <section class="header-intro">
            
          <section class="section-intro">
             <span class="visually-hidden">Karina Koryska</span>
             <img src="assets/icons/karina-korytska-logo.svg" alt="" aria-hidden="true">
-            <h3>UX/UI Designer • Digital Health • Accessibility</h3>
+           <h1>
+            <span aria-hidden="true">
+              UX/UI Designer • Digital Health • Accessibility
+            </span>
+
+            <span class="sr-only">
+              Karina Korytska - UX/UI Designer, Digital Health, Accessibility
+            </span>
+            </h1>
         </section>
 
          <section class="nav-section">
@@ -51,12 +71,13 @@
 
         </section>
     </header>
+   
     <div class="decoration-line" aria-hidden="true"></div>
     <main>
         <section class="container">
         <img src="./assets/pictures/me.png" alt="Picture of Karina Korytska" />
         <section class="about-me">
-          <h1>Hello</h1>
+          <h2>Hello</h2>
           <p>
             I'm a UX/UI Designer focused on digital health and accessibility, with a strong interest in complex, research-driven products.
           </p>
@@ -69,7 +90,7 @@
           <p>
             Currently open to junior UX roles in research-driven teams, as well as selective freelance collaborations.            </p>
           
-          <section class="contact-section">
+          <section class="contact-section" aria-hidden="true" >
             <table>
               <tr>
                 <td>e-mail</td>
@@ -127,32 +148,53 @@
         <div class="info-section">
           <section>
             <h3>Education</h3>
-            <h4>2022 - 2026</h4>
+            <p class="bold">2026 - present</p>
             <ul>
               <li>
-                Communication and Multimedia Design, Amsterdam University of
+                Master Digital Design, Interaction Design, Amsterdam University of
                 Applied Sciences
               </li>
             </ul>
-            <h4>2025 - 2025</h4>
+            <p class="bold">2022 - 2026</p>
             <ul>
               <li>
-                Front-end Development (minor), 
+                BSc in Communication and Multimedia Design, Amsterdam University of
+                Applied Sciences
+              </li>
+            </ul>
+            <p class="bold">2025 - 2025</p>
+            <ul>
+              <li>
+                Clinical Psychology (Minor), 
+                Open University of Open University of the Netherlands
+              </li>
+            </ul>
+            <p class="bold">2024 - 2025</p>
+            <ul>
+              <li>
+                Service Design (Minor), 
                 Amsterdam University of Applied Sciences  
               </li>
             </ul>
+            
 
           </section>
 
           <section>
             <h3>Courses</h3>
-            <h4>01.2025 - 07.2025</h4>
+            <p class="bold">01.2025 - 07.2025</p>
             <ul>
               <li>
                 Front-end Development Bootcamp, NOVI University of Applied Sciences
               </li>
             </ul>
-            <h4>03.2022 - 04.2022</h4>
+            
+             <p class="bold">04.2024 - 06.2024</p>
+            <ul>
+              <li> Front-end Development coursework, Amsterdam University of Applied Sciences </li>
+            </ul>
+
+            <p class="bold">03.2022 - 04.2022</p>
             <ul>
               <li>
                 PathWays IT orientation program, Techgrounds 
@@ -163,21 +205,36 @@
          
           <section>
             <h3>Hard skills</h3>
-             <h4>UX/UI & Research</h4>
+             <h4>UX/UI & Design</h4>
             <ul>
-              <li>UX design, user flows, wireframes, prototyping</li>
-              <li>UX research (interviews, testing)</li>
+              <li>User flows, wireframing, prototyping, responsive design</li>
             </ul>
-            <h4>Tools & Tech</h4>
+
+            <h4>Research & Service Design</h4>
+            <ul>
+              <li>User interviews, usability testing, user observation, qualitative research</li>
+            </ul>
+
+
+             <h4>Accessibility</h4>
+            <ul>
+              <li>WCAG, accessible interface design, accessibility evaluation</li>
+            </ul>
+
+
+            <h4>Tools & Development</h4>
             <ul>
               <li>Figma</li>
               <li>HTML / CSS</li>
               <li>JavaScript (basic)</li>
               <li>React (basic)</li>
-            </ul>
-             <h4>Other</h4>
-            <ul>
               <li>Power BI (basic)</li>
+            </ul>
+
+
+             <h4>Visual Design</h4>
+            <ul>
+              <li>Adobe Photoshop (basic)</li>
               <li>Adobe Illustrator</li>
               <li>Blender</li>
             </ul>
@@ -185,19 +242,47 @@
 
            <section>
             <h3>Soft skills</h3>
+            <h4>Empathetic & User-focused</h4>
             <ul>
-              <li>Structured & Organized</li>
-              <li>Analytical & Data-driven</li>
-              <li>Empathetic & People-oriented</li>
-              <li>Collaborative & Team-player</li>
+              <li>Understanding different perspectives and user needs.</li>
             </ul>
+
+            <h4>Collaborative</h4>
+            <ul>
+              <li>Working with stakeholders and developers to align ideas and solutions.</li>
+            </ul>
+
+
+            <h4>Research-driven</h4>
+            <ul>
+              <li>Using research and feedback to inform design decisions.</li>
+            </ul>
+            
+
+            <h4>Analytical & Structured</h4>
+            <ul>
+              <li>Breaking down complex problems into clear, actionable steps.</li>
+            </ul>
+            
+             <h4>Iterative & Adaptable</h4>
+            <ul>
+              <li>Refining concepts through testing, feedback and new insights.</li>
+            </ul>
+            
           </section>
 
 
           <section class="experience-container">
             <h3>Work experience</h3>
 
-            <h4>01.2025 - 07.2025</h4>
+             <p class="bold">09.2025 - 02.2026</p>
+            <h4>Independent UX/UI Designer</h4>
+            <ul>
+              <li>Analysed and improved the usability and accessibility of websites for GP practices.</li>
+              <li>Identified UX issues, recommended and implemented practical improvements to make information easier to find and use.</li>             
+            </ul>
+
+            <p class="bold">01.2025 - 07.2025</p>
             <h4>UX/UI Designer intern at Organiq</h4>
             <ul>
               <li>Designed user flows and interfaces for a complex role-based digital school system.</li>
@@ -206,7 +291,7 @@
               <li>Ensured technical feasibility and system logic throughout the design process.</li>
             </ul>
 
-            <h4>01.2024 - 06.2024</h4>
+            <p class="bold">01.2024 - 06.2024</p>
             <h4>UX/UI Designer & 3D-Artist intern at Organiq</h4>
             <ul>
               <li>Redesigned and developed user flows for a course targeting expectant parents.</li>              
@@ -214,13 +299,13 @@
               <li>Contributed to digital projects for children, focusing on UX and visual design.</li>
             </ul>
 
-            <h4>09.2023 - 11.2023</h4>
+            <p class="bold">09.2023 - 11.2023</p>
             <h4>UX/UI intern at Think Volunteer Indonesia</h4>
             <ul>
               <li>Refreshed an outdated brand identity and designed a new website, validated through focus group testing.</li>
             </ul>
 
-            <h4>02.2023- 06.2023</h4>
+            <p class="bold">02.2023 - 06.2023</p>
             <h4>Participant UX Research - Registration Functionality, Amsterdam University of Applied Sciences</h4>
             <ul>
               <li>

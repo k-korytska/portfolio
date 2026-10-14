@@ -51,19 +51,22 @@ h6 {
   line-height: 160%;
 }
 
-h1,
+h1 {
+  text-transform: uppercase;
+  letter-spacing: 4.2px;
+}
+
+h1 span {
+  text-transform: uppercase;
+  letter-spacing: 4.2px;
+}
+
 h2 {
+  font-size: 2.6em;
   text-transform: uppercase;
   font-weight: 700;
 }
 
-h1 {
-  font-size: 2.6em;
-}
-
-h2 {
-    font-size: 2em;
-}
 
 h3 {
   letter-spacing: 4.2px;
@@ -73,6 +76,15 @@ h3 {
 h4 {
     font-weight: 700;
     text-transform: uppercase;
+}
+
+.project-year {
+  letter-spacing: 4.2px;
+  text-transform: uppercase;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 
@@ -139,6 +151,7 @@ ol {
     position: absolute;
     z-index: 0;
     width: 100%;
+    height: 100%;
 }
 
 .header-bg spline-viewer {
@@ -260,7 +273,11 @@ td {
 }
 
 tr td:first-child {
-  color: var(--primary-accent-color);
+  background: linear-gradient(to right, var(--primary-accent-color), var(--primary-accent-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #767676;
 }
 
 .about-me {
@@ -277,6 +294,18 @@ tr td:first-child {
 
 .visually-hidden {
     display: none;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 
@@ -587,6 +616,279 @@ body.fade-out {
 
 
 
+/* header scene */
+
+
+.scene {
+  position: relative;
+  isolation: isolate;
+
+  width: 100%;
+  height: 100%;
+  /* min-height: 400px; */
+
+  display: grid;
+  place-items: center;
+
+  overflow: hidden;
+  perspective: 1000px;
+  background: #fff;
+}
+
+/* =========================
+   GLASS CURTAIN
+   ========================= */
+
+.curtain {
+  position: absolute;
+  width: 33%;
+  inset: 0;
+  z-index: 2;
+
+  overflow: hidden;
+  pointer-events: none;
+
+  background: rgba(255, 255, 255, 0.70);
+
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+
+  --reveal-x: 50%;
+  --reveal-y: 50%;
+  --reveal-size: 190px;
+}
+
+/* Alternating glass strips */
+
+.curtain__bands {
+  position: absolute;
+  inset: 0;
+
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.35) 0px,
+    rgba(255, 255, 255, 0.35) 95px,
+    rgba(225, 230, 237, 0.12) 95px,
+    rgba(225, 230, 237, 0.12) 190px
+  );
+}
+
+/* Subtle frosted texture */
+
+.curtain__texture {
+  position: absolute;
+  inset: 0;
+
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.35'/%3E%3C/svg%3E");
+
+  opacity: 0.18;
+  mix-blend-mode: multiply;
+}
+
+/* Soft circular opening directly under the cursor */
+
+.curtain.is-active {
+  -webkit-mask-image: radial-gradient(
+    circle var(--reveal-size) at var(--reveal-x) var(--reveal-y),
+    transparent 0%,
+    transparent 15%,
+    rgba(0, 0, 0, 0.08) 55%,
+    rgba(0, 0, 0, 0.25) 68%,
+    rgba(0, 0, 0, 0.65) 84%,
+    black 100%
+  );
+
+  mask-image: radial-gradient(
+    circle var(--reveal-size) at var(--reveal-x) var(--reveal-y),
+    transparent 0%,
+    transparent 45%,
+    rgba(0, 0, 0, 0.08) 55%,
+    rgba(0, 0, 0, 0.25) 68%,
+    rgba(0, 0, 0, 0.65) 84%,
+    black 100%
+  );
+}
+
+/* =========================
+   BLOB
+   ========================= */
+
+.blob {
+    top: 10%;
+    left: 10%;
+    position: absolute;
+
+  width: min(25vw, 440px);
+  aspect-ratio: 0.88;
+
+  isolation: isolate;
+
+  border-radius: 43% 57% 35% 65% / 34% 38% 62% 66%;
+
+  background:
+    radial-gradient(
+      ellipse at 65% 12%,
+      #38d9ff 0%,
+      #428bff 23%,
+      transparent 48%
+    ),
+    radial-gradient(
+      ellipse at 82% 72%,
+      #ff91e8 0%,
+      transparent 37%
+    ),
+    radial-gradient(
+      ellipse at 30% 65%,
+      #aa72ff 0%,
+      #7860f5 48%,
+      #536eff 100%
+    );
+
+  box-shadow:
+    inset -12px -16px 30px rgba(255, 126, 238, 0.18),
+    inset 12px 12px 35px rgba(57, 221, 255, 0.2);
+
+  animation:
+    morph 12s ease-in-out infinite alternate,
+    breathe 8s ease-in-out infinite,
+    rotate 30s linear infinite;
+
+  will-change: translate, border-radius;
+}
+
+/* Inner surface and color depth */
+
+.blob__surface {
+  position: absolute;
+  inset: 0;
+
+  border-radius: inherit;
+
+  background:
+    radial-gradient(
+      ellipse at 20% 30%,
+      rgba(79, 245, 255, 0.75),
+      transparent 27%
+    ),
+    radial-gradient(
+      ellipse at 90% 58%,
+      rgba(255, 147, 241, 0.75),
+      transparent 26%
+    ),
+    linear-gradient(
+      145deg,
+      #3dcbff 0%,
+      #6477ff 38%,
+      #a078f6 72%,
+      #ed8ce9 100%
+    );
+
+  mix-blend-mode: screen;
+  opacity: 0.45;
+}
+
+/* Soft specular highlights */
+
+.blob__shine {
+  position: absolute;
+  inset: 0;
+
+  border-radius: inherit;
+
+  background:
+    radial-gradient(
+      ellipse at 35% 32%,
+      rgba(255, 255, 255, 0.85) 0%,
+      rgba(255, 255, 255, 0.3) 2%,
+      transparent 13%
+    ),
+    radial-gradient(
+      ellipse at 61% 7%,
+      rgba(255, 255, 255, 0.5),
+      transparent 15%
+    ),
+    radial-gradient(
+      ellipse at 90% 66%,
+      rgba(255, 255, 255, 0.45),
+      transparent 9%
+    );
+
+  filter: blur(9px);
+  opacity: 0.85;
+  mix-blend-mode: screen;
+}
+
+/* Fine, subtle surface texture */
+
+.blob__grain {
+  position: absolute;
+  inset: 0;
+
+  border-radius: inherit;
+  pointer-events: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.3'/%3E%3C/svg%3E");
+
+  opacity: 0.16;
+  mix-blend-mode: soft-light;
+}
+
+/* Organic shape deformation */
+
+@keyframes morph {
+  0% {
+    border-radius: 42% 58% 43% 57% /
+                   42% 40% 60% 58%;
+  }
+
+  33% {
+    border-radius: 55% 45% 56% 44% /
+                   48% 58% 42% 52%;
+  }
+
+  66% {
+    border-radius: 48% 52% 40% 60% /
+                   58% 42% 58% 42%;
+  }
+
+  100% {
+    border-radius: 38% 62% 53% 47% /
+                   45% 53% 47% 55%;
+  }
+}
+
+/* Slow expansion and contraction */
+
+@keyframes breathe {
+  0%, 100% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.045;
+  }
+}
+
+/* Gentle rotation */
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob {
+    animation: none;
+  }
+}
+
+
+
 /* responsiveness */
 
 @media (max-width: 1440px) {
@@ -622,10 +924,10 @@ body.fade-out {
   .header-bg {
     width: 105%;
   }
-
+/* 
   .header-bg spline-viewer {
     transform: translate(-5%, -1%);
-  }
+  } */
 
   .process-section {
     padding: 3em;
