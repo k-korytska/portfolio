@@ -16,7 +16,7 @@
 </head>
 <body>
     <a class="skip-link" href="#project"> Skip to project </a>
-  <header class="header">
+ <header class="header">
         <section class="header-bg" aria-hidden="true">
           <div class="scene">
       <div class="blob" id="blob">
@@ -51,19 +51,25 @@
           <section class="nav-links">
             <ul>
               <li>
-                <a href="mailto:k.korytska@gmail.com"  aria-label="Send email to Karina Korytska"
-                  ><img src="./assets/icons/mail-icon.svg" alt=""
-                /></a>
+                <button  data-email="k.korytska@gmail.com"  aria-label="Copy email address of Karina Korytska" class="copy-email" id="copy-email"
+                type="button"
+                ><img src="./assets/icons/mail-icon.svg" alt=""
+                />
+              </button>
+              <span class="tooltip copy-tooltip" id="copy-tooltip" aria-hidden="true">Copy email</span>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/karina-korytska/" target="_blank" aria-label="Karina Korytska on LinkedIn"
                   ><img src="./assets/icons/linkedin-logo.svg" alt=""
                 /></a>
+                <span class="tooltip" aria-hidden="true">View LinkedIn</span>
               </li>
               <li>
                 <a href="https://dribbble.com/karinakorytska" target="_blank"  aria-label="Karina Korytska on Dribbble"
                   ><img src="./assets/icons/dribbble-logo.svg" alt=""
-                /></a>
+                />
+              <span class="tooltip" aria-hidden="true">View Dribbble</span>
+              </a>
               </li>
             </ul>
           </section>
@@ -343,5 +349,4 @@
 </body>
 
 <script defer src="scripts/script.js"></script>
-<script type="module" src="https://unpkg.com/@splinetool/viewer@1.12.90/build/spline-viewer.js"></script>
 </html>

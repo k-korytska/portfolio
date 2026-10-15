@@ -11,6 +11,10 @@ const revealSize = 380;
 const followStrength = 0.001;
 const startDelay = 600;
 
+const copyButton = document.querySelector('#copy-email');
+const tooltip = document.querySelector('#copy-tooltip');
+const contactItem = copyButton.closest('li');
+
 function toggleButtons(activeBtn, inactiveBtn) {
   activeBtn.classList.add('active');
   inactiveBtn.classList.remove('active');
@@ -121,3 +125,18 @@ function animateCursor() {
 }
 
 animateCursor();
+
+//copy email
+
+copyButton.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(copyButton.dataset.email);
+    tooltip.textContent = 'Copied!';
+  } catch {
+    tooltip.textContent = 'Copy failed';
+  }
+});
+
+contactItem.addEventListener('pointerleave', () => {
+  tooltip.textContent = 'Copy email';
+});

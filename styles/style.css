@@ -154,17 +154,6 @@ ol {
     height: 100%;
 }
 
-.header-bg spline-viewer {
-  /* width: 100%;
-  height: 100%;
-  display: block; */
-
-  display: block;
-  width: 110%;
-  height: 110%;
-  transform: translate(-5%, -5%);
-}
-
 .header-intro {
     position: relative;
     z-index: 1;
@@ -212,6 +201,58 @@ ol {
     gap: 3.5em; 
     padding: 0 1em;
 }
+
+ .nav-links li {
+  display: flex;
+  position: relative;
+}
+
+.tooltip {
+
+color: var(--background-body);
+background-color: var(--primary-text-color);
+width: max-content;
+z-index: 2;
+
+position: absolute;
+left: -140%;
+bottom: 2em;
+padding: 0.2em;
+
+opacity: 0;
+visibility: hidden;
+pointer-events: none;
+
+
+transition: opacity 300ms ease, visibility 300ms ease;
+}
+
+
+
+/* .nav-links li:not(.tooltip-dismissed):hover .tooltip,
+.nav-links li:not(.tooltip-dismissed):focus-within .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-links li.tooltip-dismissed .tooltip {
+  opacity: 0 !important;
+  visibility: hidden !important;
+} */
+
+.nav-links li:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}
+
+.nav-links li.tooltip-dismissed .tooltip {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+
+
 
 .decoration-line {
     width: 100%;
@@ -921,14 +962,6 @@ body.fade-out {
     padding: 5em 5em 0 10em;
   }
 
-  .header-bg {
-    width: 105%;
-  }
-/* 
-  .header-bg spline-viewer {
-    transform: translate(-5%, -1%);
-  } */
-
   .process-section {
     padding: 3em;
   }
@@ -969,22 +1002,24 @@ body.fade-out {
     flex-direction: column;
   }
 
-  .header-bg {
-    width: 120%;
-  }
-
-  .header-bg spline-viewer {
-    transform: translate(0%, 0%);
-  }
 
   .header-intro {
     padding: 4em 1em 0;
+  }
+
+  .container {
+    padding-left: 0;
+  }
+
+  td {
+    padding: 0.2em;
   }
 
   .works-container {
     display: flex;
     flex-direction: column;
   }
+  
 
   .info-section {
     display: flex;
@@ -995,14 +1030,15 @@ body.fade-out {
     max-width: 58%;
   }
 
+  .blob {
+    width: 30%;
+    left: 0%;
+  }
+
 }
 
 @media (max-width: 480px) {
 
-  .header-bg{
-    width: 140%;
-    height: 140%;
-  }
 
   .section-intro {
     max-width: 100%;
@@ -1010,6 +1046,43 @@ body.fade-out {
 
   .button-container {
     padding: 0 1em;
+  }
+
+  .blob {
+    left: 60%;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+
+  .nav-links ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: inherit;
+  }
+
+  .nav-links ul img {
+    width: 44px;
+  }
+
+  .skills-section {
+    gap: 0;
+    padding: 2em 0;
+  }
+
+
+  .button-container span {
+  font-size: 1em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  .contact-section {
+    display: none;
   }
 
 }
