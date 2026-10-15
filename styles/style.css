@@ -1035,6 +1035,12 @@ body.fade-out {
     left: 0%;
   }
 
+  .nav-links .tooltip {
+    left: 60%;
+    transform: translateX(-60%);
+    bottom: calc(100% + 8px);
+  }
+
 }
 
 @media (max-width: 480px) {
@@ -1063,8 +1069,20 @@ body.fade-out {
     gap: inherit;
   }
 
-  .nav-links ul img {
+  /* .nav-links ul img {
     width: 44px;
+  } */
+
+  .nav-links a, button {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+  }
+
+  .nav-links img {
+    width: 2em;
   }
 
   .skills-section {
