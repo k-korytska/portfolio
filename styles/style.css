@@ -1073,7 +1073,7 @@ body.fade-out {
     width: 44px;
   } */
 
-  .nav-links a, button {
+  .nav-links a, .copy-email {
     display: flex;
     align-items: flex-end;
     justify-content: center;
@@ -1086,7 +1086,7 @@ body.fade-out {
   }
 
   .skills-section {
-    gap: 0;
+    gap: 1em;
     padding: 2em 0;
   }
 
@@ -1101,6 +1101,10 @@ body.fade-out {
 
   .contact-section {
     display: none;
+  }
+
+  .button-container button {
+    font-size: 1.6em;
   }
 
 }
